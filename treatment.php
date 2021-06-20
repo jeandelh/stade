@@ -53,6 +53,8 @@ if(isset($_POST["form-add"]))
         $filter= 2;
     }
 
+        $entryMinA = 1;
+
         $entryMaxA= 10;
 
         $entryMaxB = 20;
@@ -237,10 +239,93 @@ if(isset($_POST["form-add"]))
      </div>
 <?php
     }
+    elseif($entryC == $entryStadium && $numberPlace <= $entryMaxB && $numberPlace > $entryMaxA)
+    {
+?>
+      <div class="positionOrientation">
+
+        <p>droite</p>
+
+
+
+        <img id="imgArrow" src="./img/arrowRight.svg">
+
+        <p>ou</p>
+
+        <p>gauche</p>
+
+        <img id="imgArrow" src="./img/arrowLeft.svg">
+
+     </div>
+
+<?php
+
+    }
+    elseif($entryC == $entryStadium && $numberPlace > $entryMaxC && $numberPlace <= $entryMaxD)
+    {
+
+ ?>
+    
+    <div class="positionOrientation">
+
+        <p>droite</p>
+
+        <img id="imgArrow" src="./img/arrowRight.svg">
+
+    </div>
+
+ <?php   
+    }
+    elseif($entryC == $entryStadium && $numberPlace <= $entryMaxA)
+    {
+?>
+     <div class="positionOrientation">
+
+        <p>gauche</p>
+
+        <img id="imgArrow" src="./img/arrowLeft.svg">
+
+     </div>
+     
+<?php
+
+    }
+    elseif($entryC == $entryStadium && $numberPlace > $entryMaxB && $numberPlace <= $entryMaxC)
+    {
+?>        
+        <p class="positionOrientation">vous êtes à la bonne entrée</p>
+<?php    
+    }
+
+    elseif($numberPlace > $entryMaxD)
+    {
+?>
+    <p class="positionOrientation" >veuillez entrer un numéro de place correct</p>
+ <?php   
+    }
+
+    elseif($numberPlace < $entryMinA)
+    {
+?>   
+    <p class="positionOrientation" >veuillez entrer un numéro de place correct</p>
+
+<?php
+    }
 }
 else
 {
-  echo "erreur veuillez remplir tous les champs et vérifier que vous mettez les bonnes valeurs dans les champs";
+?>
+
+  <ul class="positionOrientation">
+
+
+        <li> erreur vérifier que vous mettez les bonnes valeurs dans les champs </li>
+
+        <li> et veuillez remplir tous les champs </li>
+
+        
+
+  </ul>
     
- 
+<?php 
 }

@@ -17,9 +17,9 @@ et devra renvoyer un résultat qui sera soit :
 
 .....................................................................................................
 a entre 1 et  10 places
-b entre 10 et 20 places
-c entre 20 et 30 places
-d entre 30 et 40 places
+b entre 11 et 20 places
+c entre 21 et 30 places
+d entre 31 et 40 places
 
 
 
@@ -92,7 +92,7 @@ if je me situe à l'entre d et j'ai une place entre 21 est 30
     donc gauche
 )
 ......................... zone c
-if je me situe à l'entre c et j'ai une place entre 11 et 20-
+if je me situe à l'entre c et j'ai une place entre 11 et 20
 (
  donc droite ou gauche
 
@@ -112,7 +112,11 @@ if je me situe à l'entre c est j'ai une place entre 21 est 30
 (
     donc ok
 )
-if valeur au dessus de 40
+if valeur au dessus de 40-
+(
+    numero de ticket invalide 
+)
+if valeur en dessous de 1
 (
     numero de ticket invalide 
 )
