@@ -1,0 +1,118 @@
+problématique
+
+ STADIER, UN MÉTIER, UNE PASSION
+Le stade Bollaert accueille bientôt un match décisif pour le classement de son équipe de football. Et ... à cette occasion, de nouveaux stadiers sont recrutés afin d'aiguiller au mieux chacun des supporters aux entrées de l'enceinte.
+On considère dans la suite de cet énoncé que l'enceinte est un rectangle où à chaque coin se trouve un stadier junior.
+Pour aider ces stadiers vous devrez développer un programme qui permettra d'aiguiller chacun des supporters en fonction de la position courante du stadier.
+Il est donc question de dire au supporter s'il doit aller à gauche, à droite ou s'il se trouve à la bonne entrée.
+
+Le programme prendra donc en entrée une chaine de caractère de la forme suivante :
+
+position_stadier numero_place
+
+et devra renvoyer un résultat qui sera soit :
+- gauche si le supporter doit se diriger vers l'entrée se trouvant à sa gauche
+- droite si le supporter doit se diriger vers l'entrée se trouvant à sa droite
+- ok si le supporter est à la bonne entrée
+
+.....................................................................................................
+a entre 1 et  10 places
+b entre 10 et 20 places
+c entre 20 et 30 places
+d entre 30 et 40 places
+
+
+
+a=1 et 10             b=11 et 20
+***********************
+*                     *
+*                     *
+*                     *
+***********************
+c=21 et 30            d=31 et 40
+
+...............................zone a
+if je me situe à l'entre a et j'ai une place entre 1 et 10
+(
+ donc ok
+)
+if je me situe à l'entre a et j'ai une place entre 11 est 20
+(
+    donc gauche
+)
+if je me situe à l'entre a et j'ai une place entre 21 est 30
+(
+    donc droite
+   
+)
+if je me situe à l'entre a et j'ai une place entre 31 est 40
+(
+    donc gauche ou droite
+    
+)
+
+......................... zone b
+if je me situe à l'entre b et j'ai une place entre 11 et 20
+(
+ donc ok
+)
+if je me situe à l'entre b et j'ai une place entre 31 est 40
+(
+    donc gauche
+    
+)
+if je me situe à l'entre b et j'ai une place entre 1 est 10
+(
+    donc droite
+)
+if je me situe à l'entre b et j'ai une place entre 21 est 30
+(
+    donc gauche ou  droite
+
+   
+)
+......................... zone d
+if je me situe à l'entre d et j'ai une place entre 11 et 20
+(
+ donc droite
+
+ 
+)
+if je me situe à l'entre d et j'ai une place entre 31 est 40
+(
+    donc ok
+)
+if je me situe à l'entre d et j'ai une place entre 1 est 10
+(
+    donc gauche ou droite
+
+)   
+if je me situe à l'entre d et j'ai une place entre 21 est 30
+(
+    donc gauche
+)
+......................... zone c
+if je me situe à l'entre c et j'ai une place entre 11 et 20-
+(
+ donc droite ou gauche
+
+ 
+)
+if je me situe à l'entre c et j'ai une place entre 31 est 40
+(
+    donc droite
+)
+if je me situe à l'entre c et j'ai une place entre 1 est 10
+(
+    donc gauche 
+
+    
+)
+if je me situe à l'entre c est j'ai une place entre 21 est 30
+(
+    donc ok
+)
+if valeur au dessus de 40
+(
+    numero de ticket invalide 
+)
