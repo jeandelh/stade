@@ -13,8 +13,6 @@
 <?php
 
 
-  
-
 
 
 
@@ -26,15 +24,7 @@ if(isset($_POST["form-add"]))
     $numberPlace=$_POST['numberPlace'];
 
     $entryStadium=$_POST['entryStadium'];
-
-    $entryMaxA= 10;
-
-    $entryMaxB = 20;
-
-    $entryMaxC = 30;
-
-    $entryMaxD= 40;
-
+    
     function valid_donnees($donnees){
 
         $donnees = trim($donnees);
@@ -54,8 +44,8 @@ if(isset($_POST["form-add"]))
     {
         
         $filter= 1;
-    
-    
+
+
     }
 
     else
@@ -63,9 +53,27 @@ if(isset($_POST["form-add"]))
         $filter= 2;
     }
 
+        $entryMaxA= 10;
+
+        $entryMaxB = 20;
+
+        $entryMaxC = 30;
+
+        $entryMaxD= 40;
+
+        $entryA="a";
+
+        $entryB="b";
+
+        $entryC="c";
+        
+        $entryD="D";
+
+ 
 
 
-    if( "a" == $entryStadium && $numberPlace<=$entryMaxA && !empty($numberPlace) && !empty($entryStadium) && $filter==1)
+
+    if($entryA == $entryStadium && $numberPlace<=$entryMaxA && !empty($numberPlace) && !empty($entryStadium) && $filter==1)
     {
     ?>
        <p class="positionOrientation">vous êtes à la bonne entrée</p>
@@ -73,7 +81,7 @@ if(isset($_POST["form-add"]))
 
     }
 
-        elseif( "a" == $entryStadium && $numberPlace > $entryMaxA && $numberPlace <=$entryMaxB)
+        elseif( $entryA == $entryStadium && $numberPlace > $entryMaxA && $numberPlace <=$entryMaxB)
         {
 
     ?> 
@@ -86,7 +94,7 @@ if(isset($_POST["form-add"]))
      </div>
 <?php
     }
-    elseif( "a" == $entryStadium && $numberPlace > $entryMaxB && $numberPlace<=$entryMaxC)
+    elseif( $entryA == $entryStadium && $numberPlace > $entryMaxB && $numberPlace<=$entryMaxC)
     {
 ?>
     <div class="positionOrientation">
@@ -98,7 +106,7 @@ if(isset($_POST["form-add"]))
     </div>
 <?php
     }
-    elseif( "a" == $entryStadium && $numberPlace > $entryMaxC && $numberPlace<=$entryMaxD)
+    elseif( $entryA == $entryStadium && $numberPlace > $entryMaxC && $numberPlace<=$entryMaxD)
     {
 ?>      
       <div class="positionOrientation">
@@ -118,7 +126,7 @@ if(isset($_POST["form-add"]))
       </div>
 <?php 
     }
-    elseif("b" == $entryStadium && $numberPlace > $entryMaxA && $numberPlace <= $entryMaxB)
+    elseif($entryB == $entryStadium && $numberPlace > $entryMaxA && $numberPlace <= $entryMaxB)
     {
 ?>
 
@@ -128,7 +136,7 @@ if(isset($_POST["form-add"]))
 <?php
     }
 
-    elseif("b" == $entryStadium && $numberPlace > $entryMaxC && $numberPlace<=$entryMaxD)
+    elseif($entryB == $entryStadium && $numberPlace > $entryMaxC && $numberPlace<=$entryMaxD)
     {
 ?>
     <div class="positionOrientation">
@@ -141,7 +149,7 @@ if(isset($_POST["form-add"]))
     
 <?php
     }     
-    elseif("b" == $entryStadium && $numberPlace <= $entryMaxA) 
+    elseif($entryB == $entryStadium && $numberPlace <= $entryMaxA) 
     {
 ?>
       <div class="positionOrientation">
@@ -153,7 +161,7 @@ if(isset($_POST["form-add"]))
     </div>
 <?php
     }
-    elseif("b" == $entryStadium && $numberPlace > $entryMaxB && $numberPlace <= $entryMaxC) 
+    elseif($entryB == $entryStadium && $numberPlace > $entryMaxB && $numberPlace <= $entryMaxC) 
     {
 ?>
 
@@ -175,7 +183,7 @@ if(isset($_POST["form-add"]))
 
 <?php
     }
-    elseif("d" == $entryStadium && $numberPlace > $entryMaxA && $numberPlace <= $entryMaxB) 
+    elseif($entryD == $entryStadium && $numberPlace > $entryMaxA && $numberPlace <= $entryMaxB) 
     {
 ?>
         <div class="positionOrientation">
@@ -188,14 +196,14 @@ if(isset($_POST["form-add"]))
 
 <?php
     }
-    elseif("d" == $entryStadium && $numberPlace > $entryMaxC && $numberPlace <= $entryMaxD)
+    elseif($entryD == $entryStadium && $numberPlace > $entryMaxC && $numberPlace <= $entryMaxD)
     {
 ?>        
         <p class="positionOrientation">vous êtes à la bonne entrée</p>
 <?php
 
     }
-    elseif("d" == $entryStadium && $numberPlace <= $entryMaxA)
+    elseif($entryD == $entryStadium && $numberPlace <= $entryMaxA)
     {
 
 ?>       
@@ -217,7 +225,7 @@ if(isset($_POST["form-add"]))
 <?php
     }
 
-    elseif("d" == $entryStadium && $numberPlace > $entryMaxB && $numberPlace <= $entryMaxC)
+    elseif($entryD == $entryStadium && $numberPlace > $entryMaxB && $numberPlace <= $entryMaxC)
     {
 ?>
      <div class="positionOrientation">
