@@ -21,9 +21,9 @@
 if(isset($_POST["form-add"]))
 {
 
-    $numberPlace=$_POST['numberPlace'];
+    $numberPlace=$_POST['numero_place'];
 
-    $entryStadium=$_POST['entryStadium'];
+    $entryStadium=$_POST['position_stadier'];
     
     function valid_donnees($donnees){
 
@@ -34,9 +34,9 @@ if(isset($_POST["form-add"]))
 
     }
 
-    $numberPlace=valid_donnees($_POST['numberPlace']);
+    $numberPlace=valid_donnees($_POST['numero_place']);
 
-    $entryStadium=valid_donnees($_POST['entryStadium']);
+    $entryStadium=valid_donnees($_POST['position_stadier']);
 
     if(filter_var($numberPlace, FILTER_VALIDATE_INT) === 0 ||
     !filter_var($numberPlace, FILTER_VALIDATE_INT) === false)
@@ -311,6 +311,7 @@ if(isset($_POST["form-add"]))
 
 <?php
     }
+    
 }
 else
 {

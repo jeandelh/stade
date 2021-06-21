@@ -14,12 +14,14 @@
                
            
                 <div id="positionForm">
-
+                    <!--<p>numéros de place</p>
+                    
+                    <p>entrée</p>-->
                     <form id="positionForm" method="post" action="treatment.php">
 
-                                <input type="number" name="numberPlace">    
+                                <input type="number" name="numero_place" placeholder="numéros de place">    
 
-                                <select name="entryStadium">
+                                <select name="position_stadier">
 
                                     <option value="a">a</option>
 
