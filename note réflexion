@@ -16,6 +16,11 @@ et devra renvoyer un résultat qui sera soit :
 - ok si le supporter est à la bonne entrée
 
 .....................................................................................................
+information sur la réalisation du projet 
+
+les entrées sont fictives car elles ne sont pas indiqués donc j'ai mis des lettres à chaque entrée et
+ le nombre de places ne sont pas indiqués donc j'ai inventé des valeurs fictives allant 1 à 40 cependant les valeurs sont modulables à la demande du client
+.....................................................................................................
 a entre 1 et  10 places
 b entre 11 et 20 places
 c entre 21 et 30 places
